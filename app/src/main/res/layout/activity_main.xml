@@ -25,7 +25,8 @@
         android:background="@color/light_toolbar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"/>
+        tools:layout_editor_absoluteY="0dp"
+        android:elevation="5dp"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -34,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_grupo_379" />
+        app:srcCompat="@drawable/base_ptll_1" />
 
     <androidx.cardview.widget.CardView
 
