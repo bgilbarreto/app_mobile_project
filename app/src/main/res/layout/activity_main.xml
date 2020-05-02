@@ -54,7 +54,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/Efecty"
                 android:layout_width="290dp"
                 android:layout_height="35dp"
                 android:background="@drawable/input_backgroud"
@@ -69,9 +69,10 @@
                 app:layout_constraintVertical_bias="0.382" />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/Number"
                 android:layout_width="290dp"
                 android:layout_height="35dp"
+                android:layout_marginBottom="188dp"
                 android:background="@drawable/input_backgroud"
                 android:inputType="textPersonName"
                 android:text="Número de Convenio *"
@@ -84,9 +85,10 @@
                 app:layout_constraintVertical_bias="0.075" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/reference"
                 android:layout_width="290dp"
                 android:layout_height="35dp"
+                android:layout_marginBottom="140dp"
                 android:background="@drawable/input_backgroud"
                 android:inputType="textPersonName"
                 android:text="Referencia de Pago *"
@@ -96,12 +98,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText1"
-                app:layout_constraintVertical_bias="0.093" />
+                app:layout_constraintVertical_bias="0.093"
+                tools:ignore="UnknownId" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="147dp"
                 android:layout_height="38dp"
+                android:layout_marginTop="28dp"
                 android:text="TRANSFERENCIA/CONSIGNACIÓN"
                 android:textAlignment="center"
                 android:textColor="@color/dark_green"
@@ -111,12 +115,14 @@
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.392" />
+                app:layout_constraintVertical_bias="0.392"
+                tools:ignore="UnknownId" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
+                android:layout_marginBottom="44dp"
                 android:background="@drawable/ic_boton_imprimir"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
