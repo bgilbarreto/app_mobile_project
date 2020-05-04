@@ -25,7 +25,7 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.Toolbar
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/light_toolbar"
         android:elevation="5dp"
@@ -117,9 +117,10 @@
         android:background="@drawable/camera_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.969"
+        app:layout_constraintVertical_bias="0.955"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

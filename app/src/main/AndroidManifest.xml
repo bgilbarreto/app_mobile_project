@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".send_image"></activity>
-        <activity android:name=".Pago_Debito" />
-        <activity android:name=".confirm_delivery" />
-        <activity android:name=".camera_view" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".send_image"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Pago_Debito" android:screenOrientation="portrait" />
+        <activity android:name=".confirm_delivery" android:screenOrientation="portrait" />
+        <activity android:name=".camera_view" android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

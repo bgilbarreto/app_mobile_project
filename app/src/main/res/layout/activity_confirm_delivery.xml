@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="364dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/light_toolbar"
         android:elevation="5dp"
@@ -84,7 +84,7 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="109dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
