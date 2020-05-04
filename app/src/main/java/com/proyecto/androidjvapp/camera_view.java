@@ -28,6 +28,5 @@ public class camera_view extends AppCompatActivity {
                 startActivity(new Intent(camera_view.this, confirm_delivery.class));
             }
         });
-
     }
 }
