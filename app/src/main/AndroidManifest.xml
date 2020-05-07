@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+<<<<<<< HEAD
+        <activity android:name=".EncuestaP"></activity>
+        <activity android:name=".Opinion" />
+        <activity android:name=".Preguntas" />
+        <activity android:name=".preguntas" />
+=======
         <activity android:name=".ProductoActivity"></activity>
+>>>>>>> cf42a21a08f79d75b588e53a54e763a7cea37919
         <activity android:name=".CatalogoActivity" />
         <activity
             android:name=".send_image"
