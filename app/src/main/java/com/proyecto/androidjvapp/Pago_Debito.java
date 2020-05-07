@@ -17,7 +17,6 @@ public class Pago_Debito extends AppCompatActivity {
         setContentView(R.layout.activity_pago__debito);
 
         nextWindow();
-
     }
 
     public void nextWindow() {
@@ -29,5 +28,8 @@ public class Pago_Debito extends AppCompatActivity {
             }
         });
     }
+
+
+
 
 }

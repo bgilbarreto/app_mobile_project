@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private EditText str1, str2, str3;
-    private Button btn1;
+    private Button btn1,btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +31,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
 }
