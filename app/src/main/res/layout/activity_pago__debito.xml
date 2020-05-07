@@ -44,6 +44,7 @@
                 android:background="@drawable/ic_navbar_mobile"/>
 
             <Button
+                android:id="@+id/btnCarro"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:background="@drawable/ic_cart"
@@ -178,7 +179,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonCancelar"
         android:layout_width="90dp"
         android:layout_height="37dp"
         android:background="@drawable/button_back"
