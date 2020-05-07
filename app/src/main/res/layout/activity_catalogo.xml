@@ -44,10 +44,12 @@
                 android:id="@+id/textView2"
                 android:layout_width="160dp"
                 android:layout_height="32dp"
+                android:fontFamily="@font/montserrat"
                 android:text="Catálogo"
                 android:textAlignment="center"
                 android:textColor="@color/dark_green"
                 android:textSize="20dp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.423"
@@ -70,14 +72,12 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="420dp"
-        android:layout_height="400dp"
-        android:layout_marginBottom="355dp"
-        android:radius="8dp"
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="315dp"
         app:layout_constraintBottom_toTopOf="@+id/toolbar_abajo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/Suplementos" />
 
@@ -134,8 +134,7 @@
             android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="30dp"
             app:srcCompat="@drawable/ic_facebook"
             tools:layout_editor_absoluteX="233dp"
             tools:layout_editor_absoluteY="602dp" />
@@ -144,7 +143,7 @@
             android:id="@+id/imageView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             app:srcCompat="@drawable/ic_instagram"
             tools:layout_editor_absoluteX="227dp"
             tools:layout_editor_absoluteY="518dp" />
@@ -155,43 +154,98 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_whatsapp"
             tools:layout_editor_absoluteX="243dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="20dp"
             tools:layout_editor_absoluteY="562dp" />
 
 
     </androidx.appcompat.widget.Toolbar>
 
     <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="95dp"
-        android:layout_height="130dp"
-        app:srcCompat="@drawable/PROTEINAS"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="307dp" />
-
-    <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="95dp"
-        android:layout_height="130dp"
-        app:srcCompat="@drawable/vitaminas"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="307dp" />
+        android:layout_width="103dp"
+        android:layout_height="127dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/vitaminas" />
+
 
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="95dp"
         android:layout_height="130dp"
-        app:srcCompat="@drawable/pro"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="492dp" />
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_abajo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pro" />
 
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="95dp"
         android:layout_height="130dp"
-        app:srcCompat="@drawable/vit"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="492dp" />
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_abajo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/vit" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="95dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/PROTEINAS" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Proteínas"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Aminoácidos"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Megaplex"
+        android:textAlignment="center"
+        android:textSize="18sp"        app:layout_constraintEnd_toEndOf="@+id/imageView17"
+        app:layout_constraintStart_toStartOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Multivitaminico"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView18"
+        app:layout_constraintStart_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
