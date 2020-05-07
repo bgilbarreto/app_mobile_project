@@ -166,7 +166,7 @@
         android:layout_width="95dp"
         android:layout_height="130dp"
         app:srcCompat="@drawable/PROTEINAS"
-        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteX="57dp"
         tools:layout_editor_absoluteY="307dp" />
 
     <ImageView
@@ -174,7 +174,7 @@
         android:layout_width="95dp"
         android:layout_height="130dp"
         app:srcCompat="@drawable/vitaminas"
-        tools:layout_editor_absoluteX="211dp"
+        tools:layout_editor_absoluteX="254dp"
         tools:layout_editor_absoluteY="307dp" />
 
     <ImageView
@@ -182,16 +182,16 @@
         android:layout_width="95dp"
         android:layout_height="130dp"
         app:srcCompat="@drawable/pro"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="478dp" />
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="492dp" />
 
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="95dp"
         android:layout_height="130dp"
         app:srcCompat="@drawable/vit"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="478dp" />
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="492dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
