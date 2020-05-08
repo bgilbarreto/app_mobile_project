@@ -14,7 +14,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="36dp"
-        android:background="#FFFFFFF"
+        android:background="@drawable/msgtext2"
         android:contentDescription="@string/logo_login"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
