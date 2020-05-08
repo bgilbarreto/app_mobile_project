@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".perfil"></activity>
+        <activity android:name=".DatosBasicos"></activity>
+        <activity android:name=".perfil" />
         <activity android:name=".EncuestaP" />
         <activity android:name=".Opinion" />
         <activity android:name=".Preguntas" />
