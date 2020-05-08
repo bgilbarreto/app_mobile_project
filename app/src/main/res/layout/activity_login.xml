@@ -127,7 +127,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/btn_signup"
+        android:id="@+id/buttonSingup"
         android:layout_width="114dp"
         android:layout_height="46dp"
         android:layout_marginStart="161dp"
