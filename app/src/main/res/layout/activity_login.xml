@@ -61,7 +61,7 @@
             android:layout_marginEnd="46dp"
             android:layout_marginBottom="18dp"
             android:contentDescription="@string/title_login"
-            app:layout_constraintBottom_toTopOf="@+id/button_login"
+            app:layout_constraintBottom_toTopOf="@+id/button_RecuperarPass"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
             app:srcCompat="@drawable/card_backgroud" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/EditTextEmail"
             android:layout_width="275dp"
             android:layout_height="39dp"
             android:layout_marginTop="32dp"
@@ -83,7 +83,7 @@
             android:textColor="#054143"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
-            android:labelFor="@id/username"
+            android:labelFor="@id/EditTextEmail"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="@+id/back_login_form"
             app:layout_constraintStart_toStartOf="@+id/back_login_form"
@@ -103,13 +103,13 @@
             android:textColor="#054143"
             android:labelFor="@id/password"
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/button_login"
-            app:layout_constraintEnd_toEndOf="@+id/username"
-            app:layout_constraintStart_toStartOf="@+id/username"
-            app:layout_constraintTop_toBottomOf="@+id/username" />
+            app:layout_constraintBottom_toTopOf="@+id/button_RecuperarPass"
+            app:layout_constraintEnd_toEndOf="@+id/EditTextEmail"
+            app:layout_constraintStart_toStartOf="@+id/EditTextEmail"
+            app:layout_constraintTop_toBottomOf="@+id/EditTextEmail" />
 
         <Button
-            android:id="@+id/button_login"
+            android:id="@+id/button_RecuperarPass"
             android:layout_width="103dp"
             android:layout_height="36dp"
             android:layout_marginStart="153dp"

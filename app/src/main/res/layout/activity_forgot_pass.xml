@@ -4,119 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ligth_blue"
+    android:background="#68D2D5"
     tools:context=".forgotPass">
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/logo_login"
+        android:layout_width="328dp"
+        android:layout_height="105dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="31dp"
         android:layout_marginEnd="36dp"
-        android:layout_marginBottom="590dp"
-        android:contentDescription="@string/text_forgot_pass"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/msgtext2"
+        android:contentDescription="@string/logo_login"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/card_login_logo" />
 
     <TextView
-        android:id="@+id/title_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="241dp"
-        android:layout_marginBottom="100dp"
-        android:contentDescription="@string/text_forgot_pass"
+        android:id="@+id/textView33"
+        android:layout_width="293dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bck_text_2"
         android:fontFamily="@font/montserrat"
-        android:text="@string/text_forgot_pass"
-        android:textColor="@color/dark_green"
+        android:text="Recuperar contraseña"
+        android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/form_login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_login" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="415dp"
-        android:layout_height="265dp"
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="316dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33"
+        app:srcCompat="@drawable/card_backgroud" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="240dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#054143"
+        android:text="Ingresa el correo electrónico asociado a tu cuenta"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/imageView23"
+        app:layout_constraintTop_toTopOf="@+id/imageView23" />
+
+    <EditText
+        android:id="@+id/EditTextEmail"
+        android:layout_width="275dp"
+        android:layout_height="39dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="194dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_login">
+        android:autofillHints="@string/prompt_email"
+        android:background="@drawable/bck_text"
+        android:contentDescription="@string/prompt_email"
+        android:ems="10"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:labelFor="@id/EditTextEmail"
+        android:textAlignment="center"
+        android:textColor="#054143"
+        app:layout_constraintEnd_toEndOf="@+id/textView34"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toStartOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
-        <ImageView
-            android:id="@+id/back_forgotpass_form"
-            android:layout_width="334dp"
-            android:layout_height="161dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="52dp"
-            android:contentDescription="@string/text_forgot_pass"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/card_login" />
+    <Button
+        android:id="@+id/button_RecuperarPass"
+        android:layout_width="103dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_submit"
+        android:fontFamily="@font/roboto_light"
+        android:text="Enviar"
+        android:textColor="@color/dark_green"
+        app:layout_constraintEnd_toEndOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/imageView23"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextEmail" />
 
-        <EditText
-            android:id="@+id/email_forgot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="108dp"
-            android:autofillHints="@string/prompt_email"
-            android:contentDescription="@string/prompt_email"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:labelFor="@id/email_forgot"
-            android:textAlignment="center"
-            android:textColor="@color/dark_green"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="251dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="39dp"
-            android:layout_marginBottom="1dp"
-            android:contentDescription="@string/desc_forgot_pass"
-            android:fontFamily="@font/roboto_light"
-            android:text="@string/desc_forgot_pass"
-            android:textAlignment="center"
-            android:textColor="@color/dark_green"
-            app:layout_constraintBottom_toTopOf="@+id/email_forgot"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/back_forgotpass_form"
-            app:layout_constraintVertical_bias="0.877" />
-
-        <Button
-            android:id="@+id/button_forgotpass"
-            android:layout_width="116dp"
-            android:layout_height="33dp"
-            android:layout_marginStart="148dp"
-            android:layout_marginBottom="36dp"
-            android:background="@drawable/button_submit"
-            android:contentDescription="@string/action_forgotpass"
-            android:text="@string/action_forgotpass"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

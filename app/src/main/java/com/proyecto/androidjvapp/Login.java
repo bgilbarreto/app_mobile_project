@@ -18,8 +18,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
-import android.os.Bundle;
-
 public class Login extends AppCompatActivity implements View.OnClickListener {
     //defining view objects
     private EditText TextEmail;
@@ -41,11 +39,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         firebaseAuth = FirebaseAuth.getInstance();
 
         //Referenciamos los views
-        TextEmail = (EditText) findViewById(R.id.username);
+        TextEmail = (EditText) findViewById(R.id.EditTextEmail);
         TextPassword = (EditText) findViewById(R.id.password);
 
         btnRegistrar = (Button) findViewById(R.id.buttonSingup);
-        btnLogin = (Button) findViewById(R.id.button_login);
+        btnLogin = (Button) findViewById(R.id.button_RecuperarPass);
 
         progressDialog = new ProgressDialog(this);
 
@@ -156,7 +154,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 //Invocamos al método:
                 registrarUsuario();
                 break;
-            case R.id.button_login:
+            case R.id.button_RecuperarPass:
                 loguearUsuario();
                 break;
         }
