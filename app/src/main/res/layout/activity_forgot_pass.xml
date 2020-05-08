@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ligth_blue"
+    tools:context=".forgotPass">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="590dp"
+        android:contentDescription="@string/text_forgot_pass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/card_login_logo" />
+
+    <TextView
+        android:id="@+id/title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="100dp"
+        android:contentDescription="@string/text_forgot_pass"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/text_forgot_pass"
+        android:textColor="@color/dark_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="415dp"
+        android:layout_height="265dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="194dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_login">
+
+        <ImageView
+            android:id="@+id/back_forgotpass_form"
+            android:layout_width="334dp"
+            android:layout_height="161dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="52dp"
+            android:contentDescription="@string/text_forgot_pass"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/card_login" />
+
+        <EditText
+            android:id="@+id/email_forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="108dp"
+            android:autofillHints="@string/prompt_email"
+            android:contentDescription="@string/prompt_email"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:labelFor="@id/email_forgot"
+            android:textAlignment="center"
+            android:textColor="@color/dark_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="251dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginBottom="1dp"
+            android:contentDescription="@string/desc_forgot_pass"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/desc_forgot_pass"
+            android:textAlignment="center"
+            android:textColor="@color/dark_green"
+            app:layout_constraintBottom_toTopOf="@+id/email_forgot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_forgotpass_form"
+            app:layout_constraintVertical_bias="0.877" />
+
+        <Button
+            android:id="@+id/button_forgotpass"
+            android:layout_width="116dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/button_submit"
+            android:contentDescription="@string/action_forgotpass"
+            android:text="@string/action_forgotpass"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

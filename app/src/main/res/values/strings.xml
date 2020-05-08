@@ -18,4 +18,13 @@
     <string name="msginicial2">Opinion sobre nuestros productos</string>
     <string name="producto">Producto</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_login">Iniciar Sesión</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="logo_login">"Logo"</string>
+    <string name="text_forgot_pass">"Recuperar contraseña"</string>
+    <string name="desc_forgot_pass">"Ingresa el correo electrónico asociado a tu cuenta"</string>
+    <string name="action_forgotpass">Recuperar</string>
+    <string name="btn_signup">Regístrate</string>
 </resources>
