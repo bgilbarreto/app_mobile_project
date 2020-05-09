@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_login">
+        >
 
         <ImageView
             android:id="@+id/back_login_form"
@@ -93,6 +93,7 @@
             android:id="@+id/password"
             android:layout_width="0dp"
             android:layout_height="39dp"
+            android:layout_marginTop="8dp"
             android:autofillHints="@string/prompt_password"
             android:background="@drawable/bck_text"
             android:ems="10"
@@ -100,16 +101,16 @@
             android:gravity="center"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:textColor="#054143"
             android:labelFor="@id/password"
             android:textAlignment="center"
+            android:textColor="#054143"
             app:layout_constraintBottom_toTopOf="@+id/button_RecuperarPass"
             app:layout_constraintEnd_toEndOf="@+id/EditTextEmail"
             app:layout_constraintStart_toStartOf="@+id/EditTextEmail"
             app:layout_constraintTop_toBottomOf="@+id/EditTextEmail" />
 
         <Button
-            android:id="@+id/button_RecuperarPass"
+            android:id="@+id/button_login"
             android:layout_width="103dp"
             android:layout_height="36dp"
             android:layout_marginStart="153dp"
@@ -142,7 +143,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/forgot_pass"
+        android:id="@+id/button_forgot_pass"
         android:layout_width="238dp"
         android:layout_height="19dp"
         android:background="#00FFFFFF"
@@ -162,10 +163,11 @@
         android:id="@+id/imageView23"
         android:layout_width="316dp"
         android:layout_height="72dp"
+        android:layout_marginBottom="112dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_pass"
         app:srcCompat="@drawable/card_backgroud" />
 
     <TextView

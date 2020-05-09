@@ -22,7 +22,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     //defining view objects
     private EditText TextEmail;
     private EditText TextPassword;
-    private Button btnRegistrar, btnLogin;
+    private Button btnRegistrar, btnLogin, btnResetPassword;
     private ProgressDialog progressDialog;
 
 
@@ -43,14 +43,26 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         TextPassword = (EditText) findViewById(R.id.password);
 
         btnRegistrar = (Button) findViewById(R.id.buttonSingup);
-        btnLogin = (Button) findViewById(R.id.button_RecuperarPass);
+        btnLogin = (Button) findViewById(R.id.button_login);
+        btnResetPassword = findViewById(R.id.button_forgot_pass);
 
         progressDialog = new ProgressDialog(this);
 
         //asociamos un oyente al evento clic del botón
         btnRegistrar.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
+
+
+        //ir a recuperar contraseña
+        btnResetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent (Login.this, forgotPass.class));
+            }
+        });
     }
+
+
 
     private void registrarUsuario() {
 
@@ -154,7 +166,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 //Invocamos al método:
                 registrarUsuario();
                 break;
-            case R.id.button_RecuperarPass:
+            case R.id.button_login:
                 loguearUsuario();
                 break;
         }
