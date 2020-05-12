@@ -170,6 +170,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_forgot_pass" />
 
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/login_button_google"
+        android:layout_width="130dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_forgot_pass" />
+
     <ImageView
         android:id="@+id/imageView23"
         android:layout_width="316dp"
