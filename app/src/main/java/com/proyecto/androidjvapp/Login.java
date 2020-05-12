@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -21,6 +22,12 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -33,6 +40,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
     //defining view objects
@@ -48,6 +56,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private  static final String tag = "FacebookAuthentication";
     private FirebaseAuth.AuthStateListener authStateListener;
     private AccessTokenTracker accessTokenTracker;
+
+    //Login con google
+    private SignInButton signInButton;
+    private GoogleSignInClient mGoogleSignInClient;
+    private String TAG = "GoogleAuthentication";
+    private FirebaseAuth mAuthGoogle;
+    private int RC_SIGN_IN = 1;
+
 
 
     //Declaramos un objeto firebaseAuth
@@ -122,12 +138,85 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             }
         };
 
+        signInButton = findViewById(R.id.login_button_google);
+
+
+        //Inicializar firebase auth
+        mAuthGoogle = FirebaseAuth.getInstance();
+
+
+        //Configurar Google sign-in
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        //Sign-in action
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signInGoogle();
+            }
+        });
+
     }
+
+    //Iniciar sesión
+    private void signInGoogle(){
+        Intent signInGoogleIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInGoogleIntent,RC_SIGN_IN);
+    }
+
+
+    //Handle google
+    private void handleSignInGoogleResult(Task<GoogleSignInAccount> completedTask){
+        try {
+            GoogleSignInAccount acc = completedTask.getResult(ApiException.class);
+            Toast.makeText(this, "ha iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
+            Intent intencion = new Intent(getApplication(), CatalogoActivity.class);
+            startActivity(intencion);
+            FirebaseGoogleAuth(acc);
+        }catch (ApiException e){
+            Toast.makeText(this, "iniciar sesión sin éxito", Toast.LENGTH_SHORT).show();
+            FirebaseGoogleAuth(null);
+        }
+    }
+
+    //Sign-in google
+    private void FirebaseGoogleAuth(GoogleSignInAccount acct){
+        AuthCredential authCredential = GoogleAuthProvider.getCredential(acct.getIdToken(),null);
+        mAuthGoogle.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(Login.this, "Inicio de sesion exitoso", Toast.LENGTH_SHORT).show();
+
+                    FirebaseUser user = mAuthGoogle.getCurrentUser();
+                    updateUIGoogle(user);
+                }else{
+                    Toast.makeText(Login.this, "Inicio de sesion fallido", Toast.LENGTH_SHORT).show();
+                    updateUIGoogle(null);
+                }
+            }
+        });
+    }
+
+    private void updateUIGoogle(FirebaseUser fUserGoogle){
+
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
+        //OnAction result Google
+        if (requestCode == RC_SIGN_IN){
+            Task<GoogleSignInAccount> task =  GoogleSignIn.getSignedInAccountFromIntent(data);
+            handleSignInGoogleResult(task);
+        }
     }
 
     //Get token facebook
