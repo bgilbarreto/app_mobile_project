@@ -140,6 +140,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 if (task.isSuccessful()){
                     Log.d(tag, "Inicio de sesión con credencial exitoso");
                     FirebaseUser userFacebook = mFirebaseAuth.getCurrentUser();
+                    Intent intencion = new Intent(getApplication(), CatalogoActivity.class);
+                    startActivity(intencion);
                     updateFB(userFacebook);
                 }else{
                     Log.d(tag, "Inicio de sesión con credencial fallido");
