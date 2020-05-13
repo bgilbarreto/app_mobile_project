@@ -99,7 +99,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/buttonRegCatalogo"
         android:layout_width="147dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"

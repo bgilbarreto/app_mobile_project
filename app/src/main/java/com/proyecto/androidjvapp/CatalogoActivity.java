@@ -3,17 +3,20 @@ package com.proyecto.androidjvapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class CatalogoActivity extends AppCompatActivity {
 
     private Button btnFb,btnWa, btnIg;
+    private ImageView imProducto;
 
     private ProgressDialog progressDialog;
 
@@ -25,6 +28,16 @@ public class CatalogoActivity extends AppCompatActivity {
         btnFb = findViewById(R.id.buttonFacebook);
         btnIg = findViewById(R.id.buttonInstagram);
         btnWa = findViewById(R.id.buttonWhatsapp);
+
+        imProducto = findViewById(R.id.imageViewProducto);
+        imProducto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intencion = new Intent(getApplication(), ProductoActivity.class);
+                startActivity(intencion);
+            }
+        });
+
 
 
         btnFb.setOnClickListener(new View.OnClickListener() {

@@ -192,7 +192,7 @@
         app:srcCompat="@drawable/vit" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/imageViewProducto"
         android:layout_width="138dp"
         android:layout_height="138dp"
         android:layout_marginStart="45dp"
@@ -209,9 +209,9 @@
         android:text="Proteínas"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+        app:layout_constraintEnd_toEndOf="@+id/imageViewProducto"
+        app:layout_constraintStart_toStartOf="@+id/imageViewProducto"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProducto" />
 
     <TextView
         android:id="@+id/textView13"
