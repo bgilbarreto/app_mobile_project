@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseUser;
 
 public class RegistroSimple extends AppCompatActivity {
 
@@ -45,6 +46,9 @@ public class RegistroSimple extends AppCompatActivity {
                 registrarUsuario();
             }
         });
+
+
+
     }
 
     private void registrarUsuario() {
@@ -75,8 +79,19 @@ public class RegistroSimple extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //checking if success
                         if (task.isSuccessful()) {
-
                             Toast.makeText(RegistroSimple.this, "Se ha registrado el usuario con el email: " + TextEmail.getText(), Toast.LENGTH_LONG).show();
+                            FirebaseAuth auth = FirebaseAuth.getInstance();
+                            FirebaseUser user = auth.getCurrentUser();
+
+                            user.sendEmailVerification()
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(RegistroSimple.this, "Se ha enviado un correo de verificación", Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
                             Intent intencion = new Intent(getApplication(), CatalogoActivity.class);
                             startActivity(intencion);
                         } else {
