@@ -27,6 +27,7 @@
     <string name="desc_forgot_pass">"Ingresa el correo electrónico asociado a tu cuenta"</string>
     <string name="action_forgotpass">Recuperar</string>
     <string name="btn_signup">Regístrate</string>
-    <string name="facebook_app_id">175758713613316</string> <string name="fb_login_protocol_scheme">fb175758713613316</string>
+    <string name="facebook_app_id">175758713613316</string>
+    <string name="fb_login_protocol_scheme">fb175758713613316</string>
 
 </resources>

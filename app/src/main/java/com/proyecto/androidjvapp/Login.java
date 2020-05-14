@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -38,7 +37,6 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 
 import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
@@ -83,7 +81,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         TextPassword = (EditText) findViewById(R.id.password);
 
         btnRegistrar = (Button) findViewById(R.id.buttonSingup);
-        btnLogin = (Button) findViewById(R.id.button_login);
+        btnLogin = (Button) findViewById(R.id.button_registrar);
         btnResetPassword = findViewById(R.id.button_forgot_pass);
 
         progressDialog = new ProgressDialog(this);
@@ -265,48 +263,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    private void registrarUsuario() {
 
-        //Obtenemos el email y la contraseña desde las cajas de texto
-        String email = TextEmail.getText().toString().trim();
-        String password = TextPassword.getText().toString().trim();
-
-        //Verificamos que las cajas de texto no esten vacías
-        if (TextUtils.isEmpty(email)) {//(precio.equals(""))
-            Toast.makeText(this, "Se debe ingresar un email", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Falta ingresar la contraseña", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-
-        progressDialog.setMessage("Realizando registro en linea...");
-        progressDialog.show();
-
-        //registramos un nuevo usuario
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        //checking if success
-                        if (task.isSuccessful()) {
-
-                            Toast.makeText(Login.this, "Se ha registrado el usuario con el email: " + TextEmail.getText(), Toast.LENGTH_LONG).show();
-                        } else {
-                            if (task.getException() instanceof FirebaseAuthUserCollisionException) {//si se presenta una colisión
-                                Toast.makeText(Login.this, "Ese usuario ya existe ", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(Login.this, "No se pudo registrar el usuario ", Toast.LENGTH_LONG).show();
-                            }
-                        }
-                        progressDialog.dismiss();
-                    }
-                });
-
-    }
 
     private void loguearUsuario() {
         //Obtenemos el email y la contraseña desde las cajas de texto
@@ -365,9 +322,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.buttonSingup:
                 //Invocamos al método:
-                registrarUsuario();
+                Intent intencion = new Intent(getApplication(), RegistroSimple.class);
+                startActivity(intencion);
                 break;
-            case R.id.button_login:
+            case R.id.button_registrar:
                 loguearUsuario();
                 break;
         }

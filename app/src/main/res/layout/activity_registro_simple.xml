@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#68D2D5"
+    tools:context=".RegistroSimple">
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="172dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/pol" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="192dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trazado" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="167dp"
+        android:layout_height="43dp"
+        android:background="@drawable/bck_text_2"
+        android:fontFamily="@font/montserrat"
+        android:text="Registro"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/back_login_form"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_login_form"
+        android:layout_width="316dp"
+        android:layout_height="147dp"
+        android:layout_marginBottom="152dp"
+
+        android:contentDescription="@string/title_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/card_backgroud" />
+
+    <EditText
+        android:id="@+id/EditTextEmail"
+        android:layout_width="275dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints="@string/prompt_email"
+        android:background="@drawable/bck_text"
+        android:contentDescription="@string/prompt_email"
+        android:ems="10"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:labelFor="@id/EditTextEmail"
+        android:textAlignment="center"
+        android:textColor="#054143"
+        app:layout_constraintEnd_toEndOf="@+id/back_login_form"
+        app:layout_constraintStart_toStartOf="@+id/back_login_form"
+        app:layout_constraintTop_toTopOf="@+id/back_login_form" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints="@string/prompt_password"
+        android:background="@drawable/bck_text"
+        android:ems="10"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:labelFor="@id/password"
+        android:textAlignment="center"
+        android:textColor="#054143"
+        app:layout_constraintBottom_toTopOf="@+id/button_RecuperarPass"
+        app:layout_constraintEnd_toEndOf="@+id/EditTextEmail"
+        app:layout_constraintStart_toStartOf="@+id/EditTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextEmail" />
+
+    <Button
+        android:id="@+id/button_registrar"
+        android:layout_width="103dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_submit"
+        android:fontFamily="@font/roboto_light"
+        android:text="REGISTRARSE"
+        android:textColor="@color/dark_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
