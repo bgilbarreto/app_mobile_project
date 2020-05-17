@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class CatalogoActivity extends AppCompatActivity {
 
-    private Button btnFb,btnWa, btnIg;
+    private Button btnFb,btnWa, btnIg, ver_ub;
     private ImageView imProducto;
 
     private ProgressDialog progressDialog;
@@ -24,6 +24,8 @@ public class CatalogoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo);
+
+        nextWindow();
 
         btnFb = findViewById(R.id.buttonFacebook);
         btnIg = findViewById(R.id.buttonInstagram);
@@ -122,4 +124,16 @@ public class CatalogoActivity extends AppCompatActivity {
         progressDialog.show();
         //progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
+
+    public void nextWindow () {
+
+        ver_ub = (Button) findViewById(R.id.menu_lat);
+        ver_ub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CatalogoActivity.this, ubicacion_1.class));
+            }
+        });
+    }
+
 }

@@ -20,7 +20,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/menu_lat"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@drawable/ic_navbar_mobile"
