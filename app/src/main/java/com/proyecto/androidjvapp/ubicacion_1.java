@@ -116,6 +116,7 @@ public class ubicacion_1 extends AppCompatActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(4.5731911, -74.1506723);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Johan's V. Store"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 18));
         mMap.setMyLocationEnabled(true);
     }
 
