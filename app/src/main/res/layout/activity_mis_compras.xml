@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ligth_blue"
+    tools:context=".ubicacion_1">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/light_toolbar"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_navbar_mobile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/ic_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                android:text="Mis Compras"
+                android:textColor="@color/dark_green"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.427"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.533" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.946"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/photo_example" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="344dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="600dp"
+        android:background="@drawable/card_backgroud"
+        android:ems="10"
+        android:hint="    Buscar"
+        android:inputType="textPersonName"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/editText3"
+        app:layout_constraintTop_toTopOf="@+id/editText3"
+        app:srcCompat="@drawable/ic_search_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
+        app:srcCompat="@drawable/ic_mic"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="197dp"
+        android:layout_height="36dp"
+        android:background="@drawable/button_back"
+        android:text="DEJANOS TU OPINION"
+        android:textColor="@color/ligth_blue"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="358dp"
+        android:layout_height="213dp"
+        app:srcCompat="@drawable/ic_grupo_380"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="73dp"
+        android:layout_height="25dp"
+        android:text="Fecha"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="73dp"
+        android:layout_height="28dp"
+        android:text="N° Pedido"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="73dp"
+        android:layout_height="28dp"
+        android:text="Costos"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="73dp"
+        android:layout_height="27dp"
+        android:text="Productos"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="366dp" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="358dp"
+        android:layout_height="213dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_grupo_380"
+        tools:layout_editor_absoluteY="429dp" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="73dp"
+        android:layout_height="23dp"
+        android:text="Fecha"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="459dp" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="73dp"
+        android:layout_height="25dp"
+        android:text="N° Pedido"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="498dp" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="73dp"
+        android:layout_height="27dp"
+        android:text="Costos"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="539dp" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="73dp"
+        android:layout_height="25dp"
+        android:text="Productos"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="581dp" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="410dp"
+        android:layout_height="186dp"
+        app:srcCompat="@drawable/base_ptll_1"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="581dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ligth_blue"
+    tools:context=".ubicacion_1">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/light_toolbar"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_navbar_mobile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/ic_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                android:text="Mis Compras"
+                android:textColor="@color/dark_green"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.427"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.533" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.946"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/photo_example" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="344dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="600dp"
+        android:background="@drawable/card_backgroud"
+        android:ems="10"
+        android:hint="    Buscar"
+        android:inputType="textPersonName"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/editText3"
+        app:layout_constraintTop_toTopOf="@+id/editText3"
+        app:srcCompat="@drawable/ic_search_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
+        app:srcCompat="@drawable/ic_mic"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="410dp"
+        android:layout_height="186dp"
+        app:srcCompat="@drawable/base_ptll_1"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="576dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="400dp"
+        android:layout_height="157dp"
+        app:srcCompat="@drawable/card_login"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="159dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="400dp"
+        android:layout_height="157dp"
+        app:srcCompat="@drawable/card_login"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="348dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Cod 010102"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="430dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Proteínas limpias"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="BCCA GLUTAMINE"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="$230.000"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="462dp" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="400dp"
+        android:layout_height="157dp"
+        app:srcCompat="@drawable/card_login"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="541dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="SPARTAN HARD"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="595dp" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Proteínas limpias"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="568dp" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="$120.000"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="659dp" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Cod 010104"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="627dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/montserrat"
+        android:text="WHEY GOLD ONDA"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Proteínas limpias"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="187dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Proteínas limpias"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="187dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Cod 010101"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:fontFamily="@font/montserrat"
+        android:text="1"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="259dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/montserrat"
+        android:text="$180.000"
+        android:textColor="#064E50"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="113dp"
+        android:layout_height="112dp"
+        app:srcCompat="@drawable/pro"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="179dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="124dp"
+        android:layout_height="158dp"
+        app:srcCompat="@drawable/proteinas"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="347dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="128dp"
+        android:layout_height="146dp"
+        app:srcCompat="@drawable/vit"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="541dp"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,21 +1,27 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="118dp"
-    android:height="118dp"
-    android:viewportWidth="118"
-    android:viewportHeight="118">
+    android:width="345.364dp"
+    android:height="206.49dp"
+    android:viewportWidth="345.364"
+    android:viewportHeight="206.49">
   <path
-      android:pathData="M59,56.001m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"
-      android:fillColor="#092b2b"/>
+      android:pathData="M35,6L310.364,6A26,26 0,0 1,336.364 32L336.364,168.49A26,26 0,0 1,310.364 194.49L35,194.49A26,26 0,0 1,9 168.49L9,32A26,26 0,0 1,35 6z"
+      android:fillColor="#fff"/>
   <path
-      android:pathData="M95.052,57.814a5.941,5.941 0,0 1,-3.722 5.574L40.903,84.313A6.035,6.035 0,0 1,32.742 77.248l4.489,-17.6 0.466,-1.831 -0.466,-1.831L32.742,38.381a6.035,6.035 0,0 1,8.161 -7.066L91.33,52.239A5.941,5.941 0,0 1,95.052 57.814Z"
-      android:fillColor="#219396"/>
+      android:pathData="M141.364,60.184L323.364,61.184"
+      android:strokeWidth="1"
+      android:fillColor="#00000000"
+      android:strokeColor="#064e50"/>
   <path
-      android:pathData="M37.231,59.645 L32.742,77.247A6.035,6.035 0,0 0,40.903 84.313l50.427,-20.925A5.941,5.941 0,0 0,95.052 57.813L37.697,57.813Z"
-      android:fillColor="#19aeb0"/>
+      android:pathData="M141.364,100.527L323.364,100.527"
+      android:strokeWidth="1"
+      android:fillColor="#00000000"
+      android:strokeColor="#064e50"/>
   <path
-      android:pathData="M61.037,57.814a1.831,1.831 0,0 1,-1.831 1.831L37.231,59.645l0.466,-1.831L37.231,55.983L59.206,55.983A1.831,1.831 0,0 1,61.037 57.814Z"
-      android:fillColor="#efefef"/>
+      android:pathData="M141.364,139.913L323.364,139.913"
+      android:strokeWidth="1"
+      android:fillColor="#00000000"
+      android:strokeColor="#064e50"/>
   <path
-      android:pathData="M37.231,59.645L59.206,59.645A1.831,1.831 0,0 0,61.037 57.813L37.7,57.813Z"
-      android:fillColor="#c5d8df"/>
+      android:pathData="M35,6L137,6a0,0 0,0 1,0 0L137,194.49a0,0 0,0 1,0 0L35,194.49a26,26 0,0 1,-26 -26L9,32A26,26 0,0 1,35 6Z"
+      android:fillColor="#22b8bc"/>
 </vector>
