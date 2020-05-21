@@ -1,22 +1,33 @@
 package com.proyecto.androidjvapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class CatalogoActivity extends AppCompatActivity {
 
     private Button btnFb,btnWa, btnIg, ver_ub;
     private ImageView imProducto;
+    private static final int REC_CODE_SPEECH_INPUT = 100;
+    private TextView mEntradaVoz;
+    private ImageButton mBotonHablar;
 
     private ProgressDialog progressDialog;
 
@@ -93,7 +104,30 @@ public class CatalogoActivity extends AppCompatActivity {
             }
         });
 
+        mEntradaVoz = findViewById(R.id.textoEntrada);
+        mBotonHablar = findViewById(R.id.botonHablar);
 
+        mBotonHablar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iniciarEntradaVoz();
+            }
+        });
+
+
+    }
+
+    //Speech to text
+    private void iniciarEntradaVoz(){
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hola, di lo que quieras buscar");
+        try {
+            startActivityForResult(intent, REC_CODE_SPEECH_INPUT);
+        }catch (ActivityNotFoundException e){
+
+        }
     }
 
 
@@ -134,6 +168,20 @@ public class CatalogoActivity extends AppCompatActivity {
                 startActivity(new Intent(CatalogoActivity.this, ubicacion_1.class));
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case REC_CODE_SPEECH_INPUT:{
+                if (resultCode == RESULT_OK && null != data){
+                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    mEntradaVoz.setText(result.get(0));
+                }
+                break;
+            }
+        }
     }
 
 }

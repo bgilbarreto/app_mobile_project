@@ -38,11 +38,13 @@ public class RegistroSimple extends AppCompatActivity {
         TextPassword = (EditText) findViewById(R.id.password);
         btnRegistrar = (Button) findViewById(R.id.button_registrar);
 
-        progressDialog = new ProgressDialog(this);
+        //progressDialog = new ProgressDialog(this);
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progresdialog();
+                showPDialog();
                 registrarUsuario();
             }
         });
@@ -51,7 +53,21 @@ public class RegistroSimple extends AppCompatActivity {
 
     }
 
+    private void progresdialog(){
+        this.progressDialog =  new ProgressDialog(this);
+    }
+
+
+    private void  showPDialog(){
+        progressDialog.setCancelable(false);
+        progressDialog.setTitle("Registrando usuario");
+        progressDialog.setMessage("Conectando...");
+        progressDialog.show();
+        //progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    }
+
     private void registrarUsuario() {
+
 
         //Obtenemos el email y la contraseña desde las cajas de texto
         String email = TextEmail.getText().toString().trim();
