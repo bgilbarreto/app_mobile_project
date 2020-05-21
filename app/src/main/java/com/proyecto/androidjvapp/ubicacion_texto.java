@@ -31,8 +31,7 @@ import java.util.Locale;
 public class ubicacion_texto extends AppCompatActivity implements OnMapReadyCallback {
 
     private TextView input_address;
-    private Button regret;
-    private Button confirm;
+
     private GoogleMap mMap;
     private MapView map;
 
