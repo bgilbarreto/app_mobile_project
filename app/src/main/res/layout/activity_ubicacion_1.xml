@@ -12,12 +12,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar4"
+        app:layout_constraintTop_toTopOf="@+id/toolbar5"
         app:srcCompat="@drawable/ic_rectangulo_894" />
 
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/base_ptll_1" />
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
+        android:id="@+id/toolbar5"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/light_toolbar"
@@ -53,17 +64,15 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="180dp"
-                android:layout_height="30dp"
-                android:text="Ubicación de tienda"
+                android:layout_width="213dp"
+                android:layout_height="24dp"
+                android:text="Ubicación de Tienda"
                 android:textColor="@color/dark_green"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.427"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.533" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -80,47 +89,41 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/imageView24"
+    <TextView
+        android:id="@+id/Address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Dirección"
+        android:textSize="16dp"
+        android:textColor="@color/dark_green"
+        android:background="@color/card_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/base_ptll_1" />
-
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/my_map"
-        android:layout_width="341dp"
-        android:layout_height="407dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/button16"
         android:layout_width="90dp"
         android:layout_height="37dp"
         android:background="@drawable/button_back"
-        android:text="REGRESAR"
+        android:text="Regresar"
         android:textColor="@color/ligth_blue"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15"
-        app:layout_constraintVertical_bias="0.743" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
+        app:layout_constraintVertical_bias="0.95" />
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mi Dirección"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView2"
+        android:layout_width="340dp"
+        android:layout_height="440dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_map"
-        app:layout_constraintVertical_bias="0.123" />
-
+        app:layout_constraintTop_toTopOf="@+id/toolbar5"
+        app:layout_constraintVertical_bias="0.435" />
 </androidx.constraintlayout.widget.ConstraintLayout>

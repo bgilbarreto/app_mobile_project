@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -28,10 +29,11 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
+
 public class ubicacion_1 extends AppCompatActivity implements OnMapReadyCallback {
 
-    private Button regret;
-    private TextView addr;
+    private TextView TXTdireccion;
+    private Button btn;
     private GoogleMap mMap;
     private MapView map;
     public double longitud, latitud;
@@ -41,73 +43,66 @@ public class ubicacion_1 extends AppCompatActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubicacion_1);
 
-        map = (MapView) findViewById(R.id.my_map);
+        solucitarDireccion();
+
+
+        map = (MapView) findViewById(R.id.mapView2);
         map.onCreate(savedInstanceState);
         map.getMapAsync(this);
 
-
-        carga_direccion();
-
     }
 
-    private void carga_direccion () {
+    private void solucitarDireccion () {
 
-        addr = (TextView) findViewById(R.id.textView20);
-        regret = (Button) findViewById(R.id.button10);
+        TXTdireccion = (TextView) findViewById(R.id.Address);
+        btn = (Button) findViewById(R.id.button16);
 
-        LocationManager location = (LocationManager) ubicacion_1.this.getSystemService(Context.LOCATION_SERVICE);
-        LocationListener locationlistener = new LocationListener() {
-            @Override
-            public void onLocationChanged(Location location) {
-                Geocoder geoloalizador = new Geocoder(getApplicationContext(), Locale.getDefault());
-                try {
-                    List<Address> direccion = geoloalizador.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                    addr.setText(direccion.get(0).getAddressLine(0));
-                    longitud = location.getLongitude();
-                    latitud = location.getLatitude();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                LocationManager location = (LocationManager) ubicacion_1.this.getSystemService(Context.LOCATION_SERVICE);
+                LocationListener locationlistener = new LocationListener() {
+                    @Override
+                    public void onLocationChanged(Location location) {
+                        Geocoder geoloalizador = new Geocoder(getApplicationContext(), Locale.getDefault());
+                        try {
+                            List<Address> direccion = geoloalizador.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                            TXTdireccion.setText(direccion.get(0).getAddressLine(0));
+                            longitud = location.getLongitude();
+                            latitud = location.getLatitude();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                    }
+
+                    @Override
+                    public void onProviderEnabled(String provider) {
+
+                    }
+
+                    @Override
+                    public void onProviderDisabled(String provider) {
+
+                    }
+                };
+
+                int permissionCheck = ContextCompat.checkSelfPermission(ubicacion_1.this, Manifest.permission.ACCESS_FINE_LOCATION);
+                location.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationlistener);
+                if (permissionCheck == PackageManager.PERMISSION_DENIED) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+                    }
+                    else {
+                        ActivityCompat.requestPermissions(this,
+                                new String[] {
+                                        Manifest.permission.ACCESS_FINE_LOCATION
+                                },1);
+                    }
                 }
-            }
-
-            @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {
 
             }
-
-            @Override
-            public void onProviderEnabled(String provider) {
-
-            }
-
-            @Override
-            public void onProviderDisabled(String provider) {
-
-            }
-        };
-
-        int permissionCheck = ContextCompat.checkSelfPermission(ubicacion_1.this, Manifest.permission.ACCESS_FINE_LOCATION);
-        location.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationlistener);
-        permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
-
-        if (permissionCheck == PackageManager.PERMISSION_DENIED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-
-            }
-            else {
-                ActivityCompat.requestPermissions(this,
-                        new String[] {
-                                Manifest.permission.ACCESS_FINE_LOCATION
-                        },1);
-            }
-        }
-    }
-
-
-
-    private void atras () {
-
-    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -116,7 +111,7 @@ public class ubicacion_1 extends AppCompatActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(4.5731911, -74.1506723);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Johan's V. Store"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 18));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 22));
         mMap.setMyLocationEnabled(true);
     }
 
@@ -149,4 +144,5 @@ public class ubicacion_1 extends AppCompatActivity implements OnMapReadyCallback
         super.onSaveInstanceState(outState);
         map.onSaveInstanceState(outState);
     }
+
 }
