@@ -75,7 +75,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
     };
 
-
     //Declaramos un objeto firebaseAuth
     private FirebaseAuth firebaseAuth;
 
@@ -102,7 +101,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         btnRegistrar.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
 
-
         //ir a recuperar contraseña
         btnResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,7 +108,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 startActivity(new Intent (Login.this, forgotPass.class));
             }
         });
-
 
         //Login con facebook
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -362,10 +359,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 super.onAuthenticationSucceeded(result);
                 BiometricPrompt.CryptoObject authenticatedCryptoObject =
                         result.getCryptoObject();
+                Intent intencion = new Intent(getApplication(), CatalogoActivity.class);
+                startActivity(intencion);
+
                 // User has verified the signature, cipher, or message
                 // authentication code (MAC) associated with the crypto object,
                 // so you can use it in your app's crypto-driven workflows.
+
             }
+
+
 
             @Override
             public void onAuthenticationFailed() {
