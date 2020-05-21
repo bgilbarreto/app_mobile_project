@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.location.Address;
@@ -44,12 +45,24 @@ public class ubicacion_1 extends AppCompatActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_ubicacion_1);
 
         solucitarDireccion();
+        nextWindow();
 
 
         map = (MapView) findViewById(R.id.mapView2);
         map.onCreate(savedInstanceState);
         map.getMapAsync(this);
 
+    }
+
+    public void nextWindow () {
+
+        btn = (Button) findViewById(R.id.button5);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ubicacion_1.this, ubicacion_texto.class));
+            }
+        });
     }
 
     private void solucitarDireccion () {

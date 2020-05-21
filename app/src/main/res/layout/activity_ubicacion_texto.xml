@@ -129,19 +129,45 @@
 
             <EditText
                 android:id="@+id/direccion"
-                android:layout_width="290dp"
-                android:layout_height="39dp"
+                android:layout_width="235dp"
+                android:layout_height="42dp"
                 android:background="@drawable/bck_text"
                 android:ems="10"
+                android:hint="Tu Dirección"
                 android:inputType="textLongMessage"
-                android:text="Tu Dirección"
                 android:textColor="@color/dark_green"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintHorizontal_bias="0.76"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.356" />
+                app:layout_constraintVertical_bias="0.544" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar"
+                android:textColor="@color/dark_green"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/direccion"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.548" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tu Dirección actual"
+                android:textColor="@color/dark_green"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/direccion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
