@@ -34,14 +34,18 @@
 
         <activity android:name=".ubicacion_1" />
         <activity android:name=".RegistroSimple" />
-        <activity android:name=".Login">
+        <activity android:name=".Login"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".forgotPass" />
+        <activity
+            android:name=".forgotPass"
+            android:screenOrientation="portrait" />
         <activity android:name=".DatosUbicacion" />
         <activity android:name=".DatosBasicos" />
         <activity android:name=".perfil" />
