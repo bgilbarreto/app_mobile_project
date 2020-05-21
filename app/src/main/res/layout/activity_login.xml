@@ -30,6 +30,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/bck_text_2"
+        android:contentDescription="@string/title_login"
         android:fontFamily="@font/montserrat"
         android:text="Iniciar sesión"
         android:textAlignment="center"
@@ -167,8 +168,10 @@
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView23"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.264"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_forgot_pass" />
+        app:layout_constraintTop_toBottomOf="@+id/button_forgot_pass"
+        app:layout_constraintVertical_bias="0.656" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/login_button_google"
@@ -178,8 +181,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/login_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_forgot_pass" />
+        app:layout_constraintTop_toBottomOf="@+id/button_forgot_pass"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView23"
@@ -204,5 +209,17 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView23"
         app:layout_constraintStart_toStartOf="@+id/imageView23"
         app:layout_constraintTop_toTopOf="@+id/imageView23" />
+
+    <ImageButton
+        android:id="@+id/login_button_fingerprint"
+        android:layout_width="96dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/ic_action_fingerprint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/login_button"
+        app:layout_constraintTop_toBottomOf="@+id/button_forgot_pass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

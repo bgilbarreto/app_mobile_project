@@ -1,24 +1,28 @@
 package com.proyecto.androidjvapp;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricPrompt;
 
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -34,11 +38,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-
-
-import com.facebook.FacebookSdk;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import java.util.concurrent.Executor;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
     //defining view objects
@@ -62,6 +65,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuthGoogle;
     private int RC_SIGN_IN = 1;
 
+    //login huella
+    private Handler handler = new Handler();
+
+    private Executor executor = new Executor() {
+        @Override
+        public void execute(Runnable command) {
+            handler.post(command);
+        }
+    };
 
 
     //Declaramos un objeto firebaseAuth
@@ -159,6 +171,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             }
         });
 
+        //Login Huella
+        // ...
+        // Prompt appears when user clicks "Log in"
+        ImageView biometricLoginButton = findViewById(R.id.login_button_fingerprint);
+        biometricLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBiometricPrompt();
+            }
+        });
     }
 
     //Iniciar sesión
@@ -311,6 +333,52 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     }
                 });
 
+
+    }
+
+    //Login huella
+    private void showBiometricPrompt() {
+        BiometricPrompt.PromptInfo promptInfo =
+                new BiometricPrompt.PromptInfo.Builder()
+                        .setTitle("Login con Huella")
+                        .setSubtitle("Accede a nuestra app usando tu huella")
+                        .setNegativeButtonText("Cancelar")
+                        .build();
+
+        BiometricPrompt biometricPrompt = new BiometricPrompt(Login.this,
+                executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode,
+                                              @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                Toast.makeText(getApplicationContext(),
+                        "Error de autenticación: " + errString, Toast.LENGTH_SHORT)
+                        .show();
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(
+                    @NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                BiometricPrompt.CryptoObject authenticatedCryptoObject =
+                        result.getCryptoObject();
+                // User has verified the signature, cipher, or message
+                // authentication code (MAC) associated with the crypto object,
+                // so you can use it in your app's crypto-driven workflows.
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+                Toast.makeText(getApplicationContext(), "Autenticación fallida",
+                        Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
+
+
+        // Displays the "log in" prompt.
+        biometricPrompt.authenticate(promptInfo);
 
     }
 

@@ -5,6 +5,11 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "com.proyecto.androidjvapp"
         minSdkVersion 21
@@ -42,5 +47,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:17.0.0'
     implementation 'com.google.android.gms:play-services-auth:18.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
-
+    implementation 'androidx.biometric:biometric:1.0.0-beta01'
 }
