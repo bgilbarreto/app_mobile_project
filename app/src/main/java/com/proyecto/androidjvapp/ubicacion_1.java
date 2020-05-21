@@ -64,7 +64,7 @@ public class ubicacion_1 extends AppCompatActivity implements OnMapReadyCallback
                         Geocoder geoloalizador = new Geocoder(getApplicationContext(), Locale.getDefault());
                         try {
                             List<Address> direccion = geoloalizador.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                            TXTdireccion.setText(direccion.get(0).getAddressLine(0));
+                            TXTdireccion.setText(" Tu Dirección: "+direccion.get(0).getAddressLine(0));
                             longitud = location.getLongitude();
                             latitud = location.getLatitude();
                         } catch (IOException e) {
@@ -111,7 +111,7 @@ public class ubicacion_1 extends AppCompatActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(4.5731911, -74.1506723);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Johan's V. Store"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 22));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13));
         mMap.setMyLocationEnabled(true);
     }
 
