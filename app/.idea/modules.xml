@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Android-AndroidJVapp.iml" filepath="$PROJECT_DIR$/../Android-AndroidJVapp.iml" group="AndroidJVapp" />
+      <module fileurl="file://$PROJECT_DIR$/Android-AndroidJVapp-app.iml" filepath="$PROJECT_DIR$/Android-AndroidJVapp-app.iml" group="AndroidJVapp/app" />
       <module fileurl="file://$PROJECT_DIR$/../AndroidJVapp.iml" filepath="$PROJECT_DIR$/../AndroidJVapp.iml" group="AndroidJVapp" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidJVapp-app.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidJVapp-app.iml" group="app" />
       <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="AndroidJVapp/app" />

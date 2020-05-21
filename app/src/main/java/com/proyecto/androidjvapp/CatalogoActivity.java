@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class CatalogoActivity extends AppCompatActivity {
 
-    private Button btnFb,btnWa, btnIg, ver_ub;
+    private Button btnFb,btnWa, btnIg, ver_ub, btn8;
     private ImageView imProducto;
 
     private ProgressDialog progressDialog;
@@ -26,10 +26,12 @@ public class CatalogoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_catalogo);
 
         nextWindow();
+        nextWQuestions();
 
         btnFb = findViewById(R.id.buttonFacebook);
         btnIg = findViewById(R.id.buttonInstagram);
         btnWa = findViewById(R.id.buttonWhatsapp);
+        btn8 = findViewById(R.id.button8);
 
         imProducto = findViewById(R.id.imageViewProducto);
         imProducto.setOnClickListener(new View.OnClickListener() {
@@ -132,6 +134,18 @@ public class CatalogoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CatalogoActivity.this, ubicacion_1.class));
+            }
+        });
+    }
+
+
+    public void nextWQuestions () {
+
+        btn8 = (Button) findViewById(R.id.button8);
+       btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CatalogoActivity.this, Preguntas.class));
             }
         });
     }
