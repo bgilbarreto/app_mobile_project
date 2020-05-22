@@ -44,16 +44,17 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="160dp"
-                android:layout_height="32dp"
-                android:text="Pedido Realizado"
+                android:layout_width="168dp"
+                android:layout_height="31dp"
+                android:text="Carro de Compras"
                 android:textColor="@color/dark_green"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.423"
+                app:layout_constraintHorizontal_bias="0.414"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.517" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -91,26 +92,175 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_rectangulo_894" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView36"
+            android:layout_width="325dp"
+            android:layout_height="153dp"
+            android:layout_marginTop="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/card_backgroud" />
+
+        <ImageView
+            android:id="@+id/imageView39"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+            app:layout_constraintStart_toStartOf="@+id/imageView36"
+            app:layout_constraintTop_toTopOf="@+id/imageView36"
+            app:srcCompat="@drawable/pro" />
+
+        <ImageView
+            android:id="@+id/imageView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+            app:layout_constraintEnd_toEndOf="@+id/imageView36"
+            app:srcCompat="@drawable/ic_add_circle_mas" />
+
+        <ImageView
+            android:id="@+id/imageView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+            app:layout_constraintEnd_toStartOf="@+id/imageView40"
+            app:srcCompat="@drawable/ic_remove_circle_menos" />
+
+        <TextView
+            android:id="@+id/textView56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_green"
+            android:textSize="14dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+            app:layout_constraintEnd_toStartOf="@+id/imageView40"
+            app:layout_constraintStart_toEndOf="@+id/imageView41" />
+
+        <ImageView
+            android:id="@+id/imageView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView36"
+            app:layout_constraintTop_toTopOf="@+id/imageView36"
+            app:srcCompat="@drawable/ic_add_circle_mas" />
+
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Proteina Limpia"
+            app:layout_constraintStart_toEndOf="@+id/imageView39"
+            app:layout_constraintTop_toTopOf="@+id/imageView36" />
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/imageView39"
+            app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/imageView39"
+            app:layout_constraintTop_toBottomOf="@+id/textView58" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="24dp">
+
+            <ImageView
+                android:id="@+id/imageView38"
+                android:layout_width="325dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/card_backgroud" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Total producto"
+                android:textColor="@color/dark_green"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView38"
+                app:layout_constraintStart_toStartOf="@+id/imageView38"
+                app:layout_constraintTop_toTopOf="@+id/imageView38" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="$350.000"
+                android:textColor="@color/dark_green"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView38"
+                app:layout_constraintEnd_toEndOf="@+id/imageView38"
+                app:layout_constraintTop_toTopOf="@+id/imageView38" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     <Button
         android:id="@+id/button17"
         android:layout_width="90dp"
         android:layout_height="36.65dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/button_submit"
         android:text="PAGAR"
         android:textColor="@color/BotonLtra"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="645dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button18"
         android:layout_width="90dp"
         android:layout_height="35.65dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/button_back"
         android:text="REGRESAR"
         android:textColor="@color/BotonLtra"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="645dp" />
-
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button17" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
