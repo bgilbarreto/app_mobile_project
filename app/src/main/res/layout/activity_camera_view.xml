@@ -91,10 +91,13 @@
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328"
         app:srcCompat="@drawable/ic_rectangulo_869" />
 
     <Button
@@ -110,17 +113,15 @@
         app:layout_constraintVertical_bias="0.928"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/camera_Button"
+    <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/camera_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955"
-        tools:ignore="MissingConstraints" />
+        android:background="@color/common_google_signin_btn_tint"
+        android:contentDescription="@string/app_name"
+
+        app:srcCompat="@drawable/camera_icon"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="578dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
