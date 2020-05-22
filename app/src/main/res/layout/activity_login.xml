@@ -4,8 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#68D2D5"
+    android:background="@drawable/login_back"
     tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="552dp"
+        android:layout_height="748dp"
+        app:layout_constraintEnd_toStartOf="@+id/form_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pol"
+        tools:layout_editor_absoluteY="-60dp" />
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="564dp"
+        android:layout_height="1045dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="260dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo_login"
+        app:layout_constraintTop_toBottomOf="@+id/logo_login"
+        app:srcCompat="@drawable/trazado" />
 
     <ImageView
         android:id="@+id/logo_login"
@@ -25,20 +46,22 @@
 
     <TextView
         android:id="@+id/textView33"
-        android:layout_width="167dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="195dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="17dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/bck_text_2"
         android:contentDescription="@string/title_login"
         android:fontFamily="@font/montserrat"
+        android:paddingTop="9dp"
         android:text="Iniciar sesión"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/form_login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_login" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_login"
+        app:layout_constraintVertical_bias="0.529" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/form_login"
@@ -50,8 +73,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/back_login_form"
@@ -81,11 +103,11 @@
             android:ems="10"
             android:fontFamily="@font/roboto_light"
             android:gravity="center"
-            android:textColor="#054143"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
             android:labelFor="@id/EditTextEmail"
             android:textAlignment="center"
+            android:textColor="#054143"
             app:layout_constraintEnd_toEndOf="@+id/back_login_form"
             app:layout_constraintStart_toStartOf="@+id/back_login_form"
             app:layout_constraintTop_toTopOf="parent" />
@@ -154,8 +176,8 @@
         android:text="@string/text_forgot_pass"
         android:textAlignment="center"
         android:textColor="#054143"
-        android:textStyle="bold"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/form_login" />
@@ -184,7 +206,7 @@
         app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_forgot_pass"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.8" />
 
     <ImageView
         android:id="@+id/imageView23"
@@ -212,8 +234,8 @@
 
     <ImageButton
         android:id="@+id/login_button_fingerprint"
-        android:layout_width="96dp"
-        android:layout_height="95dp"
+        android:layout_width="91dp"
+        android:layout_height="83dp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="52dp"
