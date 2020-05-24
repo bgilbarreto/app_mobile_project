@@ -4,8 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#68D2D5"
+    android:background="@drawable/login_back"
     tools:context=".forgotPass">
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="204dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_login"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/pol" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/trazado"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="271dp" />
 
     <ImageView
         android:id="@+id/logo_login"
@@ -54,9 +74,9 @@
         android:layout_width="240dp"
         android:layout_height="38dp"
         android:layout_marginTop="16dp"
-        android:textColor="#054143"
         android:text="Ingresa el correo electrónico asociado a tu cuenta"
         android:textAlignment="center"
+        android:textColor="#054143"
         app:layout_constraintEnd_toEndOf="@+id/imageView23"
         app:layout_constraintStart_toStartOf="@+id/imageView23"
         app:layout_constraintTop_toTopOf="@+id/imageView23" />

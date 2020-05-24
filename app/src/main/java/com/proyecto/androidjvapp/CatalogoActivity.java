@@ -89,13 +89,24 @@ public class CatalogoActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Toast.makeText(getBaseContext(), "Conexión establecida", Toast.LENGTH_SHORT).show();
+                        openWhatsApp();
                         progressDialog.dismiss();
                     }
-                }, 4000);
+                }, 1000);
             }
         });
 
 
+    }
+
+    private void openWhatsApp() {
+        String smsNumber = "573133279919";
+        Intent sendIntent = new Intent(Intent.ACTION_SEND);
+        sendIntent.setType("text/plain");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hola, estoy interesad@ en tus productos.");
+        sendIntent.putExtra("jid", smsNumber + "@s.whatsapp.net");
+        sendIntent.setPackage("com.whatsapp");
+        startActivity(sendIntent);
     }
 
 
