@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.net.Uri;
+import android.content.pm.PackageManager;
+import android.content.Context;
 
 public class CatalogoActivity extends AppCompatActivity {
 
@@ -55,9 +58,14 @@ public class CatalogoActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Toast.makeText(getBaseContext(), "Conexión establecida", Toast.LENGTH_SHORT).show();
+                        //intent facebook
+                        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+                        String facebookUrl = getFacebookPageURL(getBaseContext());
+                        facebookIntent.setData(Uri.parse(facebookUrl));
+                        startActivity(facebookIntent);
                         progressDialog.dismiss();
                     }
-                }, 4000);
+                }, 1000);
             }
         });
 
@@ -66,15 +74,18 @@ public class CatalogoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 progresdialog();
                 showPDialogIG();
-
+                Uri uri = Uri.parse("http://instagram.com/_u/johan_s_85");
                 //Proceso completado
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         Toast.makeText(getBaseContext(), "Conexión establecida", Toast.LENGTH_SHORT).show();
+                        Intent intentIg = new Intent(Intent.ACTION_VIEW, uri);
+                        intentIg.setPackage("com.instagram.android");
+                        startActivity(intentIg);
                         progressDialog.dismiss();
                     }
-                }, 4000);
+                }, 1000);
             }
         });
 
@@ -99,6 +110,25 @@ public class CatalogoActivity extends AppCompatActivity {
 
     }
 
+    //abrir Facebook
+    public static String FACEBOOK_URL = "https://www.facebook.com/Johans-Prote%C3%ADnas-y-vitaminas-1738612086383388/";
+    public static String FACEBOOK_PAGE_ID = "1738612086383388";
+
+    public String getFacebookPageURL(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        try {
+            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) { //newer versions of fb app
+                return "fb://facewebmodal/f?href=" + FACEBOOK_URL;
+            } else { //older versions of fb app
+                return "fb://page/" + FACEBOOK_PAGE_ID;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return FACEBOOK_URL; //normal web url
+        }
+    }
+
+    //abrir whatsapp
     private void openWhatsApp() {
         String smsNumber = "573133279919";
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
@@ -108,7 +138,6 @@ public class CatalogoActivity extends AppCompatActivity {
         sendIntent.setPackage("com.whatsapp");
         startActivity(sendIntent);
     }
-
 
     private void progresdialog(){
         this.progressDialog =  new ProgressDialog(this);
