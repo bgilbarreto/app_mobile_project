@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CatalogoActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -83,7 +84,7 @@
         app:srcCompat="@drawable/suplementos" />
 
     <EditText
-        android:id="@+id/textoEntrada"
+        android:id="@+id/editText3"
         android:layout_width="344dp"
         android:layout_height="41dp"
         android:layout_marginStart="32dp"
@@ -96,6 +97,7 @@
         android:paddingLeft="12dp"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -104,20 +106,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textoEntrada"
-        app:layout_constraintEnd_toEndOf="@+id/textoEntrada"
-        app:layout_constraintTop_toTopOf="@+id/textoEntrada"
+        app:layout_constraintBottom_toBottomOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/editText3"
+        app:layout_constraintTop_toTopOf="@+id/editText3"
         app:srcCompat="@drawable/ic_search_black_24dp" />
 
     <ImageButton
         android:id="@+id/botonHablar"
         android:layout_width="36dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="8dp"
         android:src="@drawable/ic_mic_black_24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textoEntrada"
+        app:layout_constraintBottom_toBottomOf="@+id/editText3"
         app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="@+id/textoEntrada" />
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="@+id/editText3"
+        app:layout_constraintTop_toTopOf="@+id/editText3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_abajo"
@@ -161,6 +165,7 @@
             android:background="@drawable/ic_instagram"
             tools:layout_editor_absoluteX="149dp"
             tools:layout_editor_absoluteY="499dp" />
+
         <Button
             android:id="@+id/buttonWhatsapp"
             android:layout_width="42dp"
@@ -258,8 +263,6 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView18"
         app:layout_constraintStart_toStartOf="@+id/imageView18"
         app:layout_constraintTop_toBottomOf="@+id/imageView18" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
