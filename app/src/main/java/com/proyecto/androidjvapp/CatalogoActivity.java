@@ -173,9 +173,9 @@ public class CatalogoActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode){
-            case REC_CODE_SPEECH_INPUT:{
-                if (resultCode == RESULT_OK && null != data){
+        switch (requestCode) {
+            case REC_CODE_SPEECH_INPUT: {
+                if (resultCode == RESULT_OK && null != data) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     mEntradaVoz.setText(result.get(0));
                 }
