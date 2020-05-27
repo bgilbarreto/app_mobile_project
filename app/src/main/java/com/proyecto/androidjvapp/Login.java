@@ -357,8 +357,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             public void onAuthenticationSucceeded(
                     @NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                BiometricPrompt.CryptoObject authenticatedCryptoObject =
-                        result.getCryptoObject();
+                BiometricPrompt.CryptoObject authenticatedCryptoObject = result.getCryptoObject();
                 Intent intencion = new Intent(getApplication(), CatalogoActivity.class);
                 startActivity(intencion);
 

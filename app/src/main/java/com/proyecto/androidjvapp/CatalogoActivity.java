@@ -19,7 +19,7 @@ import android.content.Context;
 public class CatalogoActivity extends AppCompatActivity {
 
     private Button btnFb,btnWa, btnIg, ver_ub, btn8;
-    private ImageView imProducto;
+    private ImageView imProducto, imglogo;
 
     private ProgressDialog progressDialog;
 
@@ -44,7 +44,14 @@ public class CatalogoActivity extends AppCompatActivity {
                 startActivity(intencion);
             }
         });
-
+        imglogo = findViewById(R.id.imageView5);
+        imglogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent updateperfil = new Intent(getApplication(), DatosBasicos.class);
+                startActivity(updateperfil);
+            }
+        });
 
 
         btnFb.setOnClickListener(new View.OnClickListener() {
