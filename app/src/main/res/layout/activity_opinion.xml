@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo2"
-    tools:context=".MainActivity">
+    tools:context=".Opinion">
 
 
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="358dp"
         android:layout_height="226dp"
+        android:layout_marginBottom="1dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -41,72 +43,59 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="364dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="160dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginBottom="328dp"
-            android:text="@string/bueno"
-            android:textSize="23sp" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="160dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="36dp"
-            android:layout_marginBottom="328dp"
-            android:text="@string/regular"
-            android:textSize="23sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="361dp"
-        android:layout_height="171dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="123dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/msgtext3"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:text=" Ayudanos a mejorar" />
-    </LinearLayout>
-
     <Button
         android:id="@+id/Enviar"
-        android:layout_width="129dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="143dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="124dp"
         android:background="@drawable/button_back"
         android:gravity="center"
         android:onClick="onCreate"
-        android:text="@string/enviar"
+        android:text="@string/continuar"
         android:textColor="#FFFFFF"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
-        app:layout_constraintVertical_bias="0.325" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <Button
+        android:id="@+id/Calificar"
+        android:layout_width="140dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="124dp"
+        android:background="@drawable/button_back"
+        android:gravity="center"
+        android:onClick="onCreate"
+        android:text="@string/calificar"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="409dp"
+        android:layout_height="247dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_calf" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
