@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn1,btn2;
     private ImageView img;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void nextWindow () {
         btn1 = (Button) findViewById(R.id.button2);
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -51,33 +54,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    //metodo para crear un nombre unico de cada fotografia
-    String currentPhotoPath;
-    private File createImageFile() throws IOException {
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "Backup_" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File image = File.createTempFile(imageFileName,".jpg",storageDir);
 
-        currentPhotoPath = image.getAbsolutePath();
-        return image;
-    }
+
+
     //metodo para tomar foto y crear el archivo
-
-    //metodo para mostrar vistas previas en un imageviw de la foto tomada
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            img.setImageBitmap(imageBitmap);
-        }
-    }
-
     static final int REQUEST_TAKE_PHOTO = 1;
-    public void tomarFoto() {
+    private  void tomarFoto() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             File photoFile = null;
@@ -91,8 +73,35 @@ public class MainActivity extends AppCompatActivity {
                 Uri photoURI = FileProvider.getUriForFile(this,"com.example.android.fileprovider", photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+
             }
         }
     }
+    //metodo para crear un nombre unico de cada fotografia
+    String currentPhotoPath;
+    private File createImageFile() throws IOException {
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String imageFileName = "Backup_" + timeStamp + "_";
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File image = File.createTempFile(imageFileName,".jpg",storageDir);
+
+        currentPhotoPath = image.getAbsolutePath();
+        return image;
+    }
+
+
+    //metodo para mostrar vistas previas en un imageviw de la foto tomada
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            img.setImageBitmap(imageBitmap);
+        }
+    }
+
+
 
 }

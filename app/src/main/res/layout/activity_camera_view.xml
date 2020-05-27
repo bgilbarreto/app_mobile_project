@@ -119,9 +119,11 @@
         android:layout_height="wrap_content"
         android:background="@color/common_google_signin_btn_tint"
         android:contentDescription="@string/app_name"
-
+        android:onClick="onClick"
         app:srcCompat="@drawable/camera_icon"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="134dp"
         tools:layout_editor_absoluteY="578dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
