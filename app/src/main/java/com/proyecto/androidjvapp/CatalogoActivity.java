@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
@@ -125,7 +123,7 @@ public class CatalogoActivity extends AppCompatActivity {
             }
         });
 
-        mEntradaVoz = findViewById(R.id.editText3);
+        mEntradaVoz = findViewById(R.id.codigo);
         mBotonHablar = findViewById(R.id.botonHablar);
 
         mBotonHablar.setOnClickListener(new View.OnClickListener() {

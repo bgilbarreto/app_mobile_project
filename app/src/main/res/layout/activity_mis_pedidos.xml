@@ -74,7 +74,7 @@
 
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/codigo"
         android:layout_width="344dp"
         android:layout_height="41dp"
         android:layout_marginStart="32dp"
@@ -97,9 +97,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText3"
-        app:layout_constraintEnd_toEndOf="@+id/editText3"
-        app:layout_constraintTop_toTopOf="@+id/editText3"
+        app:layout_constraintBottom_toBottomOf="@+id/codigo"
+        app:layout_constraintEnd_toEndOf="@+id/codigo"
+        app:layout_constraintTop_toTopOf="@+id/codigo"
         app:srcCompat="@drawable/ic_search_black_24dp" />
 
     <ImageView
