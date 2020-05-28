@@ -32,5 +32,30 @@
     <string name="title_activity_maps">Map</string>
     <string name="continuar">Continuar</string>
     <string name="calificar">Calificar</string>
+    <string name="Texo_evio_recojerTienda">RECOJER EN LA TIENDA</string>
+    <string name="Texto_evio_envioDomicilio">ENVÍO A DOMICILIO</string>
+    <string name="Texto_envio_metodoEnvio">ELEGIR MÉTODO DE ENVÍO</string>
+    <string name="Texto_envio_tuDirreccion">Tu Dirección</string>
+    <string name="Texto_envio_CambiarDireccion">CAMBIAR DIRECCIÓN</string>
+    <string name="Texto_envio_TotalProducto">Total Productos</string>
+    <string name="Texto_envio_CostoEnvio">Costo de Envío</string>
+    <string name="Texto_envio_TotalPagar">Total a Pagar</string>
+    <string name="Texto_envio_valorPro">$0</string>
+    <string name="Texto_envio_valorPag">$0</string>
+    <string name="Texto_envio_valoreEnv">$0</string>
+    <string name="Texto_pago_ElegirMetPag">ELEGIR MÉTODO DE PAGO</string>
+    <string name="Texto_pago_TarjetaCred">Tarjeta Crédito</string>
+    <string name="Texto_pago_DebitoBancario">Débito Bancario</string>
+    <string name="Texto_pago_Transf">Transferencias/</string>
+    <string name="Texto_pago_Consigna">Consignaciones</string>
+    <string name="Texto_pago_resumen">RESUMEN</string>
+    <string name="Texto_pago_TotalProducto">Total Productos</string>
+    <string name="Texto_pago_CostoEnvio">Costo de Envío</string>
+    <string name="Texto_pago_TotalPagar">Total a Pagar</string>
+    <string name="Texto_pago_valorPro">$0</string>
+    <string name="Texto_pago_valorPag">$0</string>
+    <string name="Texto_pago_valoreEnv">$0</string>
+
+
 
 </resources>

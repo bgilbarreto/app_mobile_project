@@ -159,65 +159,117 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView43"
         app:srcCompat="@drawable/card_backgroud" />
 
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+        app:layout_constraintStart_toStartOf="@+id/imageView43"
+        app:layout_constraintTop_toTopOf="@+id/imageView43"
+        app:srcCompat="@drawable/logistico" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Texto_evio_envioDomicilio"
+        android:textColor="@color/TitulomMenu"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+        app:layout_constraintEnd_toEndOf="@+id/imageView43"
+        app:layout_constraintStart_toEndOf="@+id/imageView39"
+        app:layout_constraintTop_toTopOf="@+id/imageView43" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="411dp"
+        android:layout_height="188dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/imageView45"
             android:layout_width="325dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/card_backgroud"
-            tools:layout_editor_absoluteX="43dp"
-            tools:layout_editor_absoluteY="449dp" />
-
-        <TextView
-            android:id="@+id/textView65"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="290dp"
-            tools:layout_editor_absoluteY="469dp" />
-
-        <TextView
-            android:id="@+id/textView66"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="290dp"
-            tools:layout_editor_absoluteY="508dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/card_backgroud" />
 
         <TextView
             android:id="@+id/textView63"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="83dp"
-            tools:layout_editor_absoluteY="508dp" />
-
-        <TextView
-            android:id="@+id/textView62"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="83dp"
-            tools:layout_editor_absoluteY="469dp" />
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/Texto_envio_valoreEnv"
+            android:textColor="@color/TitulomMenu"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView45"
+            app:layout_constraintTop_toBottomOf="@+id/textView62" />
 
         <TextView
             android:id="@+id/textView64"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="83dp"
-            tools:layout_editor_absoluteY="547dp" />
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/Texto_envio_TotalPagar"
+            android:textColor="@color/TitulomMenu"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView45"
+            app:layout_constraintTop_toBottomOf="@+id/textView67" />
 
         <TextView
             android:id="@+id/textView67"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="290dp"
-            tools:layout_editor_absoluteY="547dp" />
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/Texto_envio_CostoEnvio"
+            android:textColor="@color/TitulomMenu"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView45"
+            app:layout_constraintTop_toBottomOf="@+id/textView65" />
+
+        <TextView
+            android:id="@+id/textView65"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/Texto_envio_TotalProducto"
+            android:textColor="@color/TitulomMenu"
+            app:layout_constraintStart_toStartOf="@+id/imageView45"
+            app:layout_constraintTop_toTopOf="@+id/imageView45"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/Texto_envio_valorPro"
+            android:textColor="@color/TitulomMenu"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView45"
+            app:layout_constraintTop_toTopOf="@+id/imageView45" />
+
+        <TextView
+            android:id="@+id/textView66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/Texto_envio_valorPag"
+            android:textColor="@color/TitulomMenu"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView45"
+            app:layout_constraintTop_toBottomOf="@+id/textView63" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -235,7 +287,9 @@
         android:id="@+id/textView60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/Texo_evio_recojerTienda"
+        android:textColor="@color/TitulomMenu"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView37"
         app:layout_constraintEnd_toEndOf="@+id/imageView37"
         app:layout_constraintStart_toEndOf="@+id/imageView46"
@@ -246,10 +300,37 @@
         android:layout_width="250dp"
         android:layout_height="15dp"
         android:text="Cll. 132 #49-39 Bogotá,Colombia"
+        android:textAlignment="center"
+        android:textColor="@color/TitulomMenu"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView44"
         app:layout_constraintEnd_toEndOf="@+id/imageView44"
         app:layout_constraintStart_toStartOf="@+id/imageView44"
         app:layout_constraintTop_toTopOf="@+id/imageView44" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/Texto_envio_tuDirreccion"
+        android:textColor="@color/TitulomMenu"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView44"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/Texto_envio_metodoEnvio"
+        android:textColor="@color/TitulomMenu"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     `
 </androidx.constraintlayout.widget.ConstraintLayout>
