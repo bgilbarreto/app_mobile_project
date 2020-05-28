@@ -13,10 +13,11 @@ public class CarroDeCompras extends AppCompatActivity {
 
     String [][] datos = {
             {"categoria","nombre","codigo","precio","cantidad"},
+            {"categoria","nombre","codigo","precio","cantidad"},
             {"categoria","nombre","codigo","precio","cantidad"}
     };
 
-    int[] datosImg = {R.drawable.pro,R.drawable.proteinas};
+    int[] datosImg = {R.drawable.pro,R.drawable.proteinas,R.drawable.vit};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
