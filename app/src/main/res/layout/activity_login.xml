@@ -32,14 +32,11 @@
         android:id="@+id/logo_login"
         android:layout_width="328dp"
         android:layout_height="105dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="36dp"
         android:background="@drawable/msgtext2"
         android:contentDescription="@string/logo_login"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/form_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/card_login_logo" />
@@ -48,8 +45,6 @@
         android:id="@+id/textView33"
         android:layout_width="195dp"
         android:layout_height="49dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/bck_text_2"
         android:contentDescription="@string/title_login"
         android:fontFamily="@font/montserrat"
@@ -60,8 +55,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/form_login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_login"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_login" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/form_login"
