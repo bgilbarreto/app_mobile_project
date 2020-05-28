@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toStartOf="@+id/form_login"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pol"
-        tools:layout_editor_absoluteY="-60dp" />
+        tools:layout_editor_absoluteY="-60dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView35"
