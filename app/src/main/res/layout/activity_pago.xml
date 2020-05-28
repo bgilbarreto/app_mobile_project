@@ -289,16 +289,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView72" />
 
-        <ImageView
-            android:id="@+id/imageView41"
-            android:layout_width="80dp"
-            android:layout_height="70dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView49"
-            app:layout_constraintEnd_toEndOf="@+id/imageView49"
-            app:layout_constraintStart_toStartOf="@+id/imageView49"
-            app:layout_constraintTop_toTopOf="@+id/imageView49"
-            app:srcCompat="@drawable/BotonPSE" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
