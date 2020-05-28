@@ -24,7 +24,7 @@ import java.util.Locale;
 
 public class CatalogoActivity extends AppCompatActivity {
 
-    private Button btnFb,btnWa, btnIg, ver_ub, btn8;
+    private Button btnFb,btnWa, btnIg, ver_ub, btn8, btcdc;
     private ImageView imProducto, imglogo;
 
     private ProgressDialog progressDialog;
@@ -44,6 +44,7 @@ public class CatalogoActivity extends AppCompatActivity {
         btnIg = findViewById(R.id.buttonInstagram);
         btnWa = findViewById(R.id.buttonWhatsapp);
         btn8 = findViewById(R.id.button8);
+        btcdc = findViewById(R.id.botton_carro_compras);
 
         imProducto = findViewById(R.id.imageViewProducto);
         imProducto.setOnClickListener(new View.OnClickListener() {
@@ -130,6 +131,15 @@ public class CatalogoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 iniciarEntradaVoz();
+            }
+        });
+
+        btcdc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent carroDeCompras = new Intent(getApplication(), CarroDeCompras.class);
+                startActivity(carroDeCompras);
+
             }
         });
 
