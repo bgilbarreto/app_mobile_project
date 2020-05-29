@@ -25,7 +25,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".navegacion"></activity>
+        <activity android:name=".pago_credito"></activity>
+        <activity android:name=".pago_pse" />
+        <activity android:name=".navegacion" />
         <activity android:name=".mis_compras" />
         <activity android:name=".Pago" />
         <activity android:name=".envio" />
