@@ -58,7 +58,7 @@ public class CatalogoActivity extends AppCompatActivity {
         imglogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent updateperfil = new Intent(getApplication(), DatosBasicos.class);
+                Intent updateperfil = new Intent(getApplication(), perfil.class);
                 startActivity(updateperfil);
             }
         });
@@ -209,7 +209,7 @@ public class CatalogoActivity extends AppCompatActivity {
         ver_ub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CatalogoActivity.this, ubicacion_1.class));
+                startActivity(new Intent(CatalogoActivity.this, navegacion.class));
             }
         });
     }
