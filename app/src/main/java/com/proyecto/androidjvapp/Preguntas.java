@@ -9,6 +9,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,8 @@ public class Preguntas extends AppCompatActivity {
     EditText inputEditText;
     Button sendButton;
     private Button btn1;
+    private Button boton1, boton2;
+    private ImageView boton3;
     Context context;
 
     @Override
@@ -50,6 +53,9 @@ public class Preguntas extends AppCompatActivity {
 
 
         nextWindow();
+        navegation();
+        cart();
+        profile();
     }
 
     private void getResponse(String input) {
@@ -119,4 +125,35 @@ public class Preguntas extends AppCompatActivity {
             }
         });
     }
+
+    public void navegation () {
+        boton1 = (Button) findViewById(R.id.button5);
+        boton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Preguntas.this, navegacion.class));
+            }
+        });
+    }
+
+    public void cart () {
+        boton2 = (Button) findViewById(R.id.carrito);
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Preguntas.this, CarroDeCompras.class));
+            }
+        });
+    }
+
+    public void profile () {
+        boton3 = (ImageView) findViewById(R.id.imageView5);
+        boton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Preguntas.this, perfil.class));
+            }
+        });
+    }
+
 }

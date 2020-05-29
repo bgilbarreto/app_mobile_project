@@ -53,6 +53,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
+                android:id="@+id/carrito"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:background="@drawable/ic_cart"

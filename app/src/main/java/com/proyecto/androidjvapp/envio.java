@@ -12,6 +12,8 @@ public class envio extends AppCompatActivity {
 
     private Button pagar, ubicar;
     private ImageView img1, img2;
+    private Button boton1, boton2;
+    private ImageView boton3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,10 @@ public class envio extends AppCompatActivity {
         cambiarUbicacion();
         cambiarUbicacion2();
         verTienda();
+        navegation();
+        cart();
+        profile();
+
 
     }
 
@@ -61,6 +67,37 @@ public class envio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(envio.this, ubicacion_1.class));
+            }
+        });
+    }
+
+
+    public void navegation () {
+        boton1 = (Button) findViewById(R.id.button5);
+        boton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(envio.this, navegacion.class));
+            }
+        });
+    }
+
+    public void cart () {
+        boton2 = (Button) findViewById(R.id.carrito);
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(envio.this, CarroDeCompras.class));
+            }
+        });
+    }
+
+    public void profile () {
+        boton3 = (ImageView) findViewById(R.id.imageView5);
+        boton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(envio.this, perfil.class));
             }
         });
     }
