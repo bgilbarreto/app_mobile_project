@@ -115,7 +115,7 @@ public class Preguntas extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Preguntas.this,CatalogoActivity.class));
+                startActivity(new Intent(Preguntas.this,navegacion.class));
             }
         });
     }

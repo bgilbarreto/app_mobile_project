@@ -96,7 +96,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="112dp"
         android:background="@drawable/button_back"
-        android:text="DEJANOS TU OPINION"
+        android:text="DEJANOS TU OPINIÓN"
         android:textColor="@color/ligth_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

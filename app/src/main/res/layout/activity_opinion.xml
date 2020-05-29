@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/msgtext1"
             android:gravity="center"
-            android:text="Queremos conocer tu opinion sobre nosotros"
+            android:text="Queremos conocer tu opinión sobre nosotros"
             android:textSize="24sp" />
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_marginEnd="56dp"
             android:background="@drawable/msgtext2"
             android:gravity="center"
-            android:text="¿Como calificarias nuestro servicio?"
+            android:text="¿Como calificarías nuestro servicio?"
             android:textSize="15sp" />
 
     </LinearLayout>
