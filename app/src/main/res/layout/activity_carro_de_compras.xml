@@ -145,7 +145,7 @@
 
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/pagoSiguiente"
         android:layout_width="90dp"
         android:layout_height="36.65dp"
         android:layout_marginStart="50dp"
