@@ -24,7 +24,7 @@ public class Pago_Debito extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Pago_Debito.this, send_image.class));
+                startActivity(new Intent(Pago_Debito.this, confirm_delivery.class));
             }
         });
     }

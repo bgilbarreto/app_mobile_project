@@ -25,7 +25,7 @@ public class confirm_delivery extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(confirm_delivery.this, Pago_Debito.class));
+                startActivity(new Intent(confirm_delivery.this, CatalogoActivity.class));
             }
         });
     }
