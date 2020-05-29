@@ -32,15 +32,15 @@ public class camera_view extends AppCompatActivity {
 
     }
 
-    /*public void onClick(View v){
+    public void onClick(View v){
         final View temp= v;
         tomarFoto();
-    }*/
+    }
 
 
 
 
-   /* public void nextWindow() {
+   public void nextWindow() {
         btn1 = (Button) findViewById(R.id.camera_Button);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,9 +48,9 @@ public class camera_view extends AppCompatActivity {
                 startActivity(new Intent(camera_view.this, send_image.class));
             }
         });
-    }*/
+    }
 
-    /*String currentPhotoPath;
+    String currentPhotoPath;
     private File createImageFile() throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "Backup_" + timeStamp + "_";
@@ -72,11 +72,11 @@ public class camera_view extends AppCompatActivity {
 
             }
 
-            if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this,"com.example.android.fileprovider", photoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+            if (photoFile != null) { Uri photoURI = FileProvider.getUriForFile(this,
+                        "com.example.android.fileprovider",
+                        photoFile);
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI.toString());
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-
             }
         }
     }
@@ -90,6 +90,6 @@ public class camera_view extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             img.setImageBitmap(imageBitmap);
         }
-    }*/
+    }
 
 }
