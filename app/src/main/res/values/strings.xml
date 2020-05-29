@@ -15,7 +15,7 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="regular">Regular</string>
     <string name="enviar">Enviar</string>
-    <string name="msginicial2">Opinion sobre nuestros productos</string>
+    <string name="msginicial2">Opinión sobre nuestros productos</string>
     <string name="producto">Producto</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_login">Iniciar Sesión</string>

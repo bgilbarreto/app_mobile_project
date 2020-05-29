@@ -25,6 +25,8 @@ import java.util.Date;
 public class camera_view extends AppCompatActivity {
 
     private Button btn1;
+    private Button boton1, boton2;
+    private ImageView boton3;
     private ImageView img;
 
 
@@ -33,11 +35,17 @@ public class camera_view extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_view);
 
+<<<<<<< HEAD
         //nextWindow();
         img =(ImageView)findViewById(R.id.imageView);
         if (ContextCompat.checkSelfPermission(camera_view.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(camera_view.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(camera_view.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1000);
         }
+=======
+        nextWindow();
+        cart();
+        profile();
+>>>>>>> 4cdeff249947cf99e5d8f327795ce13959cc12fa
 
     }
 
@@ -47,6 +55,7 @@ public class camera_view extends AppCompatActivity {
     }
 
 
+<<<<<<< HEAD
 
 
    public void nextWindow() {
@@ -60,6 +69,9 @@ public class camera_view extends AppCompatActivity {
     }
 
     String mCurrentPhotoPath;
+=======
+    String currentPhotoPath;
+>>>>>>> 4cdeff249947cf99e5d8f327795ce13959cc12fa
     private File createImageFile() throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "Backup_" + timeStamp + "_";
@@ -100,6 +112,36 @@ public class camera_view extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             img.setImageBitmap(imageBitmap);
         }
+    }
+
+    public void nextWindow () {
+        boton1 = (Button) findViewById(R.id.navegation);
+        boton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(camera_view.this, navegacion.class));
+            }
+        });
+    }
+
+    public void cart () {
+        boton2 = (Button) findViewById(R.id.carrito);
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(camera_view.this, CarroDeCompras.class));
+            }
+        });
+    }
+
+    public void profile () {
+        boton3 = (ImageView) findViewById(R.id.profile);
+        boton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(camera_view.this, perfil.class));
+            }
+        });
     }
 
 }

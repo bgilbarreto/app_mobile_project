@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -13,8 +14,10 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -34,6 +37,8 @@ public class ubicacion_texto extends AppCompatActivity implements OnMapReadyCall
 
     private GoogleMap mMap;
     private MapView map;
+    private Button boton1, boton2;
+    private ImageView boton3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,10 @@ public class ubicacion_texto extends AppCompatActivity implements OnMapReadyCall
         map = (MapView) findViewById(R.id.mapa);
         map.onCreate(savedInstanceState);
         map.getMapAsync(this);
+
+        navegation();
+        cart();
+        profile();
 
     }
 
@@ -134,6 +143,36 @@ public class ubicacion_texto extends AppCompatActivity implements OnMapReadyCall
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         map.onSaveInstanceState(outState);
+    }
+
+    public void navegation () {
+        boton1 = (Button) findViewById(R.id.button5);
+        boton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ubicacion_texto.this, navegacion.class));
+            }
+        });
+    }
+
+    public void cart () {
+        boton2 = (Button) findViewById(R.id.carrito);
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ubicacion_texto.this, CarroDeCompras.class));
+            }
+        });
+    }
+
+    public void profile () {
+        boton3 = (ImageView) findViewById(R.id.imageView5);
+        boton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ubicacion_texto.this, perfil.class));
+            }
+        });
     }
 
 }

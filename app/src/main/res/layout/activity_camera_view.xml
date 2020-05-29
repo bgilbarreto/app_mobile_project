@@ -29,7 +29,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/navegation"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@drawable/ic_navbar_mobile"
@@ -40,6 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
+                android:id="@+id/carrito"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:background="@drawable/ic_cart"
@@ -62,7 +63,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/profile"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintBottom_toBottomOf="parent"
