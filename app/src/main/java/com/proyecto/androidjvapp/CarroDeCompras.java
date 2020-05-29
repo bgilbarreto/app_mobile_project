@@ -38,7 +38,7 @@ public class CarroDeCompras extends AppCompatActivity {
         pagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CarroDeCompras.this, Pago.class));
+                startActivity(new Intent(CarroDeCompras.this, envio.class));
             }
         });
     }
