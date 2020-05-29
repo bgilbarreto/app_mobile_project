@@ -21,6 +21,8 @@ import java.util.Date;
 public class camera_view extends AppCompatActivity {
 
     private Button btn1;
+    private Button boton1, boton2;
+    private ImageView boton3;
     private ImageView img;
 
     @Override
@@ -28,7 +30,9 @@ public class camera_view extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_view);
 
-        //nextWindow();
+        nextWindow();
+        cart();
+        profile();
 
     }
 
@@ -37,18 +41,6 @@ public class camera_view extends AppCompatActivity {
         tomarFoto();
     }
 
-
-
-
-   public void nextWindow() {
-        btn1 = (Button) findViewById(R.id.camera_Button);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(camera_view.this, send_image.class));
-            }
-        });
-    }
 
     String currentPhotoPath;
     private File createImageFile() throws IOException {
@@ -90,6 +82,36 @@ public class camera_view extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             img.setImageBitmap(imageBitmap);
         }
+    }
+
+    public void nextWindow () {
+        boton1 = (Button) findViewById(R.id.navegation);
+        boton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(camera_view.this, navegacion.class));
+            }
+        });
+    }
+
+    public void cart () {
+        boton2 = (Button) findViewById(R.id.carrito);
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(camera_view.this, CarroDeCompras.class));
+            }
+        });
+    }
+
+    public void profile () {
+        boton3 = (ImageView) findViewById(R.id.profile);
+        boton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(camera_view.this, perfil.class));
+            }
+        });
     }
 
 }

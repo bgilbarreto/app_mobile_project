@@ -26,7 +26,7 @@ public class pago_credito extends AppCompatActivity {
         ver_ub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(pago_credito.this, MainActivity.class));
+                startActivity(new Intent(pago_credito.this, confirm_delivery.class));
             }
         });
     }

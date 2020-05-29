@@ -40,7 +40,7 @@ public class envio extends AppCompatActivity {
         ubicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(envio.this, ubicacion_texto.class));
+                startActivity(new Intent(envio.this, DatosUbicacion.class));
             }
         });
     }
