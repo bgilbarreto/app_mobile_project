@@ -35,17 +35,17 @@ public class camera_view extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_view);
 
-<<<<<<< HEAD
+
         //nextWindow();
         img =(ImageView)findViewById(R.id.imageView);
         if (ContextCompat.checkSelfPermission(camera_view.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(camera_view.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(camera_view.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1000);
         }
-=======
+
         nextWindow();
         cart();
         profile();
->>>>>>> 4cdeff249947cf99e5d8f327795ce13959cc12fa
+
 
     }
 
@@ -55,23 +55,29 @@ public class camera_view extends AppCompatActivity {
     }
 
 
-<<<<<<< HEAD
 
 
    public void nextWindow() {
         btn1 = (Button) findViewById(R.id.camera_Button);
+        boton1 = (Button) findViewById(R.id.navegation);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(camera_view.this, send_image.class));
             }
         });
+       boton1.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(camera_view.this, navegacion.class));
+           }
+       });
     }
 
     String mCurrentPhotoPath;
-=======
+
     String currentPhotoPath;
->>>>>>> 4cdeff249947cf99e5d8f327795ce13959cc12fa
+
     private File createImageFile() throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "Backup_" + timeStamp + "_";
@@ -114,15 +120,7 @@ public class camera_view extends AppCompatActivity {
         }
     }
 
-    public void nextWindow () {
-        boton1 = (Button) findViewById(R.id.navegation);
-        boton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(camera_view.this, navegacion.class));
-            }
-        });
-    }
+
 
     public void cart () {
         boton2 = (Button) findViewById(R.id.carrito);
